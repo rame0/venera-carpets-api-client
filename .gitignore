@@ -2,3 +2,4 @@
 /config.ini
 /.phpunit.result.cache
 /vendor/
+/.phpunit.cache/
