@@ -201,10 +201,10 @@ class Client
     {
         $params = [
             'page' => $page,
-            '$brandId' => $this->_checkGetArrayValue($brandId),
-            '$categoryId' => $this->_checkGetArrayValue($categoryId),
-            '$parentId' => $this->_checkGetArrayValue($parentId),
-            '$tFormId' => $this->_checkGetArrayValue($tFormId),
+            'brandId' => $this->_checkGetArrayValue($brandId),
+            'categoryId' => $this->_checkGetArrayValue($categoryId),
+            'parentId' => $this->_checkGetArrayValue($parentId),
+            'tFormId' => $this->_checkGetArrayValue($tFormId),
         ];
         return $this->_request('products', $params);
     }
@@ -270,7 +270,7 @@ class Client
     {
         $params = [
             'page' => $page,
-            '$propertyId' => $this->_checkGetArrayValue($propertyId),
+            'propertyId' => $this->_checkGetArrayValue($propertyId),
         ];
         return $this->_request('property_values', $params);
     }
