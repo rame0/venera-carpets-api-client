@@ -308,6 +308,22 @@ class Client
         return $this->_request('warehouses/' . $id);
     }
 
+    /**
+     * @param string $name
+     * @param string $dest
+     * @return string
+     */
+    public function downloadImage(string $name, string $dest): string
+    {
+        $ch = curl_init('https://vnstatic.net/venera/source/' . $name);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $data = curl_exec($ch);
+        curl_close($ch);
+
+        file_put_contents($dest, $data);
+
+        return $dest;
+    }
 
     /**
      * @param string $method
